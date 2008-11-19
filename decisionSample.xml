@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE brainstorm SYSTEM "defs/brainstorm.dtd">
+<?xml-stylesheet type="text/xsl" href="defs/brainstorm.xslt"?>
+<brainstorm title="Пример принятия решения">
+	<problem title="Стоит ли развивать этот проект?">
+		<description>Найдет ли этот проект хоть какое-то применение?</description>
+		<solution title="Надо развивать">
+			<advantage>Пригодится когда-нибудь</advantage>
+			<disadvantage>Да сколько уже таких проектов было!</disadvantage>
+			<problem title="Время и другие ресурсы">
+				<description>Проект-то хоть и небольшой, однако, трудоемкость какая-никакая, все-таки имеется.</description>
+			</problem>
+		</solution>
+		<solution title="Забросить, и больше не вспоминать">
+			<advantage>Нет проекта - нет и проблем!</advantage>
+		</solution>
+	</problem>
+</brainstorm>

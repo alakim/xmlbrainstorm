@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % basicMarkup "#PCDATA | p | ref | list">
+<!ELEMENT brainstorm (problem)*>
+<!ATTLIST brainstorm
+	title CDATA #REQUIRED
+>
+<!ELEMENT problem (description?, (problem | solution)*)>
+<!ATTLIST problem
+	id ID #IMPLIED
+	title CDATA #REQUIRED
+>
+<!ELEMENT solution (description?, advantage*, disadvantage*, problem*)>
+<!ATTLIST solution
+	id ID #IMPLIED
+	title CDATA #REQUIRED
+	rate (-3 | -2 | -1 | 0 | 1 | 2 | 3) "0"
+>
+<!ELEMENT description (%basicMarkup;)*>
+<!ELEMENT p (#PCDATA | ref)*>
+<!ELEMENT ref EMPTY>
+<!ATTLIST ref
+	id IDREF #REQUIRED
+>
+<!ELEMENT advantage (%basicMarkup;)*>
+<!ATTLIST advantage
+	rate (1 | 2 | 3) "1"
+>
+<!ELEMENT disadvantage (%basicMarkup;)*>
+<!ATTLIST disadvantage
+	rate (1 | 2 | 3) "1"
+>
+<!ELEMENT list (li)*>
+<!ELEMENT li (#PCDATA | ref)*>
